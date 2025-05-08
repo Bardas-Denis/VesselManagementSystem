@@ -16,7 +16,7 @@ GO
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Owner')
 BEGIN
     CREATE TABLE Owner (
-        Owner_Id INT PRIMARY KEY,
+        Owner_Id INT IDENTITY(1,1) PRIMARY KEY,
         Owner_name NVARCHAR(255) NOT NULL
     );
 END
@@ -26,7 +26,7 @@ GO
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Ship')
 BEGIN
     CREATE TABLE Ship (
-        Ship_Id INT PRIMARY KEY,
+        Ship_Id INT IDENTITY(1,1) PRIMARY KEY,
         Ship_name NVARCHAR(255) NOT NULL,
         Imo_number BIGINT NOT NULL
     );
@@ -37,7 +37,7 @@ GO
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Ship_Category')
 BEGIN
     CREATE TABLE Ship_Category (
-        Id INT PRIMARY KEY,
+        Id INT IDENTITY(1,1) PRIMARY KEY,
         Ship_id INT FOREIGN KEY REFERENCES Ship(Ship_Id),
         Ship_type NVARCHAR(255),
         Ship_tonnage BIGINT
