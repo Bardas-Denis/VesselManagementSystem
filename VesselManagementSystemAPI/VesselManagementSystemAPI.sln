@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34322.80
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VesselManagementSystemAPI", "VesselManagementSystemAPI\VesselManagementSystemAPI.csproj", "{1100B2AE-CF0E-4DCB-A2B2-55E5E6872800}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VesselManagementSystemAPI.Tests", "VesselManagementSystemAPI.Tests\VesselManagementSystemAPI.Tests.csproj", "{189E8889-2F4E-4A36-A18C-7BB7CCBE6B5B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1100B2AE-CF0E-4DCB-A2B2-55E5E6872800}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1100B2AE-CF0E-4DCB-A2B2-55E5E6872800}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1100B2AE-CF0E-4DCB-A2B2-55E5E6872800}.Release|Any CPU.Build.0 = Release|Any CPU
+		{189E8889-2F4E-4A36-A18C-7BB7CCBE6B5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{189E8889-2F4E-4A36-A18C-7BB7CCBE6B5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{189E8889-2F4E-4A36-A18C-7BB7CCBE6B5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{189E8889-2F4E-4A36-A18C-7BB7CCBE6B5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

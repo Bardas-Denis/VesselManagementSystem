@@ -8,49 +8,44 @@ using VesselManagementSystemAPI.Repositories;
 using VesselManagementSystemAPI.Services;
 using VesselManagementSystemAPI.UnitOfWork;
 
-var builder = WebApplication.CreateBuilder(args);
-
-builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-builder.Services.AddDbContext<VesselDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-builder.Services.AddAutoMapper(typeof(Program));
-
-builder.Host.ConfigureContainer<ContainerBuilder>(container =>
+public class Program
 {
-    // Repositories (already registered)
-    container.RegisterType<ShipRepository>().As<IShipRepository>().InstancePerLifetimeScope();
-    container.RegisterType<OwnerRepository>().As<IOwnerRepository>().InstancePerLifetimeScope();
+    public static void Main(string[] args)
+    {
+        var builder = WebApplication.CreateBuilder(args);
 
-    // Unit of Work
-    container.RegisterType<UnitOfWork>()
-             .As<IUnitOfWork>()
-             .InstancePerLifetimeScope();
+        builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
 
-    // Services
-    container.RegisterType<ShipService>().As<IShipService>().InstancePerLifetimeScope();
-    container.RegisterType<OwnerService>().As<IOwnerService>().InstancePerLifetimeScope();
-});
+        builder.Services.AddControllers();
+        builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddSwaggerGen();
 
-var app = builder.Build();
+        builder.Services.AddDbContext<VesselDbContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
+        builder.Services.AddAutoMapper(typeof(Program));
+
+        builder.Host.ConfigureContainer<ContainerBuilder>(container =>
+        {
+            container.RegisterType<ShipRepository>().As<IShipRepository>().InstancePerLifetimeScope();
+            container.RegisterType<OwnerRepository>().As<IOwnerRepository>().InstancePerLifetimeScope();
+            container.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerLifetimeScope();
+            container.RegisterType<ShipService>().As<IShipService>().InstancePerLifetimeScope();
+            container.RegisterType<OwnerService>().As<IOwnerService>().InstancePerLifetimeScope();
+        });
+
+        var app = builder.Build();
+
+        if (app.Environment.IsDevelopment())
+        {
+            app.UseSwagger();
+            app.UseSwaggerUI();
+        }
+
+        app.UseHttpsRedirection();
+        app.UseAuthorization();
+        app.MapControllers();
+
+        app.Run();
+    }
 }
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();
