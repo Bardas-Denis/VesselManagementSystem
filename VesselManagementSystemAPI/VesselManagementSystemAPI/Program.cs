@@ -2,6 +2,7 @@ using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 using VesselApi.UnitOfWork;
 using VesselManagementSystemAPI.Data;
 using VesselManagementSystemAPI.Repositories;
@@ -22,6 +23,12 @@ public class Program
 
         builder.Services.AddDbContext<VesselDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+        builder.Services.AddSwaggerGen(options =>
+        {
+            var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+            options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
+        });
 
         builder.Services.AddAutoMapper(typeof(Program));
 

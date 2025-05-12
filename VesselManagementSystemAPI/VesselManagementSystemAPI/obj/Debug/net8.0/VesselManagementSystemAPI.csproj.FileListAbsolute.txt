@@ -458,3 +458,5 @@ C:\Users\Legion\Desktop\Altele\VesselManagementSystem\VesselManagementSystemAPI\
 C:\Users\Legion\Desktop\Altele\VesselManagementSystem\VesselManagementSystemAPI\VesselManagementSystemAPI\obj\Debug\net8.0\VesselManagementSystemAPI.pdb
 C:\Users\Legion\Desktop\Altele\VesselManagementSystem\VesselManagementSystemAPI\VesselManagementSystemAPI\obj\Debug\net8.0\VesselManagementSystemAPI.genruntimeconfig.cache
 C:\Users\Legion\Desktop\Altele\VesselManagementSystem\VesselManagementSystemAPI\VesselManagementSystemAPI\obj\Debug\net8.0\ref\VesselManagementSystemAPI.dll
+C:\Users\Legion\Desktop\Altele\VesselManagementSystem\VesselManagementSystemAPI\VesselManagementSystemAPI\bin\Debug\net8.0\VesselManagementSystemAPI.xml
+C:\Users\Legion\Desktop\Altele\VesselManagementSystem\VesselManagementSystemAPI\VesselManagementSystemAPI\obj\Debug\net8.0\VesselManagementSystemAPI.xml

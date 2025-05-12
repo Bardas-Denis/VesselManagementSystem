@@ -13,6 +13,11 @@ namespace VesselManagementSystemAPI.Controllers
         private readonly IOwnerService _service;
         public OwnerController(IOwnerService service) => _service = service;
 
+        /// <summary>
+        /// This is a method used to delete an owner
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {

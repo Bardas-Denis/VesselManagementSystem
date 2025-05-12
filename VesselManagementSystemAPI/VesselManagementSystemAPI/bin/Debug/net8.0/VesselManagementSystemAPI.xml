@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VesselManagementSystemAPI</name>
+    </assembly>
+    <members>
+        <member name="M:VesselManagementSystemAPI.Controllers.OwnerController.Delete(System.Int32)">
+            <summary>
+            This is a method used to delete an owner
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VesselManagementSystemAPI.Controllers.ShipController.GetAll">
+            <summary>
+            This is a method used to get all ships
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VesselManagementSystemAPI.Controllers.ShipController.GetAllWithDetails">
+            <summary>
+            This is a method used to get all ships with all their details
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:VesselManagementSystemAPI.Controllers.ShipController.Get(System.Int32)">
+            <summary>
+            This is method used to get ship by id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VesselManagementSystemAPI.Controllers.ShipController.Create(VesselManagementSystemAPI.DTOs.CreateShipWithDetailsDto)">
+            <summary>
+            This is a method used to add a ship
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VesselManagementSystemAPI.Controllers.ShipController.Update(System.Int32,VesselManagementSystemAPI.DTOs.UpdateShipDto)">
+            <summary>
+            This is a method used to update a ship
+            </summary>
+            <param name="dto"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:VesselManagementSystemAPI.Controllers.ShipController.Delete(System.Int32)">
+            <summary>
+            This is a method used to delete a ship
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:VesselManagementSystemAPI.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:VesselManagementSystemAPI.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:VesselManagementSystemAPI.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:VesselManagementSystemAPI.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:VesselApi.UnitOfWork.IUnitOfWork.CompleteAsync">
+            <summary>
+            Commits all changes made through the repositories in one transaction.
+            </summary>
+            <returns>Number of state entries written to the database.</returns>
+        </member>
+    </members>
+</doc>
