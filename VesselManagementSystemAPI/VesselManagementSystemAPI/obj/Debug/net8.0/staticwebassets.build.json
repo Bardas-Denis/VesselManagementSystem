@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "R8KuqmXnsfzcuFia7/MToVfyocKtfWK4lg0fzbpXtlU=",
+  "Source": "VesselManagementSystemAPI",
+  "BasePath": "_content/VesselManagementSystemAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
