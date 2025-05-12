@@ -1,0 +1,6 @@
+@VesselManagementSystemAPI_HostAddress = http://localhost:5237
+
+GET {{VesselManagementSystemAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
